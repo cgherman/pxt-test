@@ -1,8 +1,14 @@
+
 /**
 * This is a Test Namespace
 */
 //% weight=70 icon="\uf185" color=#EC7505
 namespace testing {
+
+    export const SpriteKindToolbar = SpriteKind.create()
+    export const SpriteKindDialog = SpriteKind.create()
+    export const SpriteKindBoundary = SpriteKind.create()
+
     /**
      * Check if your number is greater than zero.
      */
