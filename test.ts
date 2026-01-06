@@ -19,10 +19,14 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Player)
 scene.setBackgroundColor(7)
 
-let number = game.askForNumber("Pick a number")
-if (testing.TestingCheck(number)) {
-    number = testing.TestingFlip(number)
+let num = game.askForNumber("Pick a number")
+if (testing.CheckPositivity(num)) {
+    num = testing.FlipPositivity(num)
 }
-game.showLongText("The negative version of your number is: " + number, DialogLayout.Bottom)
+game.showLongText("The negative version of your number is: " + num, DialogLayout.Bottom)
 
 scene.setBackgroundColor(8)
+let squareSize = -num % 120
+let sqareSprite = testing.DrawRectangle(80, 60, squareSize, squareSize, 4)
+let centerSprite = testing.DrawRectangle(80, 60, 2, 2, 0)
+centerSprite.sayText("Size: " + convertToText(squareSize))
