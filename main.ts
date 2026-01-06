@@ -12,7 +12,7 @@ namespace testing {
     /**
      * Check if your number is greater than zero.
      */
-    //% blockId=testing_CheckPositivity block="pick an %inputValue"
+    //% blockId=testing_CheckPositivity block="Check the positivity of %inputValue"
     //% help=testing/CheckPositivity
     export function CheckPositivity(inputValue: number): boolean {
         return inputValue > 0
@@ -21,7 +21,7 @@ namespace testing {
     /**
      * Get the opposite of your number
      */
-    //% blockId=testing_Positivity block="Flip your %inputValue"
+    //% blockId=testing_Positivity block="Flip the positivity of %inputValue"
     //% help=testing/FlipPositivity
     export function FlipPositivity(inputValue: number): number {
         return -inputValue;
@@ -32,7 +32,7 @@ namespace testing {
      */
     //% blockId=testing_DrawRectangle block="Draw a rectangle centered at x %x and %y of width %width and height %height of color %fillcolor"
     //% help=testing/DrawRectangle
-    export function DrawRectangle(xCenter: number, yCenter: number, width: number, height: number, fillColor: number) {
+    export function DrawRectangle(xCenter: number = 80, yCenter: number = 60, width: number = 50, height: number = 50, fillColor: number = 1) {
         let tempSprite = sprites.create(image.create(width, height))
         tempSprite.setPosition(xCenter, yCenter)
         tempSprite.image.fill(fillColor)
